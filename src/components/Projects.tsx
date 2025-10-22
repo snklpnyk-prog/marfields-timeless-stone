@@ -1,5 +1,10 @@
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
+import project3 from "@/assets/project-3.jpg";
+import project4 from "@/assets/project-4.jpg";
+import project5 from "@/assets/project-5.jpg";
+import project6 from "@/assets/project-6.jpg";
+import project7 from "@/assets/project-7.jpg";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -16,6 +21,36 @@ const projects = [
     location: "New Delhi, India",
     image: project2,
     description: "Black Marquina marble reception with gold accents"
+  },
+  {
+    name: "Private Spa Retreat",
+    location: "Goa, India",
+    image: project3,
+    description: "White Carrara marble bathroom with custom features"
+  },
+  {
+    name: "Corporate Headquarters",
+    location: "Bangalore, India",
+    image: project4,
+    description: "Beige marble reception area with contemporary design"
+  },
+  {
+    name: "Fine Dining Restaurant",
+    location: "Mumbai, India",
+    image: project5,
+    description: "Green marble tables and bar counter for upscale dining"
+  },
+  {
+    name: "Luxury Fashion Boutique",
+    location: "New Delhi, India",
+    image: project6,
+    description: "Marble display pedestals and feature wall for high-end retail"
+  },
+  {
+    name: "Contemporary Kitchen",
+    location: "Pune, India",
+    image: project7,
+    description: "Carrara marble countertops and backsplash with modern design"
   }
 ];
 
