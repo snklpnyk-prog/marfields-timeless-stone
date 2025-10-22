@@ -2,7 +2,7 @@ import quarryImage from "@/assets/quarry.jpg";
 
 const About = () => {
   return (
-    <section className="py-20 px-4 md:py-32 bg-background">
+    <section id="about" className="py-20 px-4 md:py-32 bg-background">
       <div className="container mx-auto max-w-7xl">
         <div className="grid gap-12 md:grid-cols-2 md:gap-16 items-center">
           <div className="order-2 md:order-1 animate-fade-in">

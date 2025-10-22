@@ -68,7 +68,7 @@ const Projects = () => {
   const currentProject = projects[currentIndex];
 
   return (
-    <section className="py-20 px-4 md:py-32 bg-background">
+    <section id="projects" className="py-20 px-4 md:py-32 bg-background">
       <div className="container mx-auto max-w-7xl">
         <div className="mb-16 text-center animate-fade-in-up">
           <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
