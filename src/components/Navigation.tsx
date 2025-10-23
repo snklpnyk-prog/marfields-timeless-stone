@@ -1,94 +1,84 @@
 import { useState } from "react";
+import { Menu, X, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Facebook, Instagram, Linkedin } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
-    setIsOpen(false);
-  };
-
   const menuItems = [
-    { label: "Home", id: "hero" },
-    { label: "Collection", id: "collection" },
-    { label: "Projects", id: "projects" },
-    { label: "Gallery", id: "gallery" },
-    { label: "Blog", id: "blog" },
-    { label: "Contact", id: "contact" },
+    { name: "Home", href: "/" },
+    { name: "Collection", href: "/collection" },
+    { name: "Projects", href: "/projects" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex items-center">
-            <h1 className="text-2xl font-serif font-bold text-foreground">
-              Marfields
-            </h1>
-          </div>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md shadow-sm">
+      <nav className="container mx-auto flex items-center justify-between px-4 py-4">
+        <Link to="/" className="text-2xl font-bold text-gold">
+          Marfields
+        </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
+        {/* Desktop Menu */}
+        <div className="hidden items-center gap-8 lg:flex">
+          {menuItems.map((item) => (
+            <Link
+              key={item.name}
+              to={item.href}
+              className="text-sm font-medium text-foreground transition-colors hover:text-gold"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
+
+        {/* Mobile Menu Button */}
+        <Button
+          variant="ghost"
+          size="icon"
+          className="lg:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </Button>
+      </nav>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="absolute top-full left-0 right-0 bg-background/98 backdrop-blur-md shadow-lg lg:hidden border-t border-border">
+          <div className="container mx-auto px-4 py-6">
+          <div className="flex flex-col gap-6">
             {menuItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-gold transition-colors duration-300 font-sans text-sm"
+              <Link
+                key={item.name}
+                to={item.href}
+                className="text-lg font-medium text-foreground transition-colors hover:text-gold"
+                onClick={() => setIsOpen(false)}
               >
-                {item.label}
-              </button>
+                {item.name}
+              </Link>
             ))}
-            <div className="flex items-center gap-4 ml-4 border-l border-border pl-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-gold transition-colors">
-                <Facebook className="h-4 w-4" />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-gold transition-colors">
-                <Instagram className="h-4 w-4" />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-gold transition-colors">
-                <Linkedin className="h-4 w-4" />
+            
+            {/* Social Icon - Mobile Only */}
+            <div className="flex items-center gap-3 pt-4 mt-4 border-t border-border">
+              <a
+                href="https://www.instagram.com/marfields_official?igsh=eTJ4dGVsMmEzbjd6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-gold transition-colors flex items-center gap-2"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+                <span className="text-sm">Follow us on Instagram</span>
               </a>
             </div>
           </div>
-
-          {/* Mobile Menu */}
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[300px]">
-              <div className="flex flex-col gap-6 mt-8">
-                <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-xl font-serif font-bold">Menu</h2>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <X className="h-5 w-5" />
-                  </Button>
-                </div>
-                {menuItems.map((item) => (
-                  <button
-                    key={item.id}
-                    onClick={() => scrollToSection(item.id)}
-                    className="text-left text-lg text-foreground hover:text-gold transition-colors duration-300 font-sans py-2"
-                  >
-                    {item.label}
-                  </button>
-                ))}
-              </div>
-            </SheetContent>
-          </Sheet>
+          </div>
         </div>
-      </div>
-    </nav>
+      )}
+    </header>
   );
 };
 

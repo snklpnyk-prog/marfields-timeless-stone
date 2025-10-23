@@ -1,75 +1,84 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Calendar } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import blogSelectionImage from "@/assets/blog-marble-selection.jpg";
+import blogQuarryImage from "@/assets/blog-quarry-process.jpg";
+import blogMaintenanceImage from "@/assets/blog-maintenance.jpg";
+import blogTrendsImage from "@/assets/blog-design-trends.jpg";
 
 const blogPosts = [
   {
-    title: "Choosing the Perfect Italian Marble for Your Home",
-    excerpt: "Discover how to select the ideal marble type for different spaces in your home. From Carrara to Calacatta, learn which marble suits your aesthetic.",
-    date: "March 15, 2025",
-    image: "/placeholder.svg",
-    category: "Design Guide",
+    title: "How to Choose the Perfect Marble for Your Home",
+    excerpt: "Discover the key factors to consider when selecting marble for different spaces in your luxury home.",
+    date: "March 15, 2024",
+    image: blogSelectionImage,
+    category: "Guide"
   },
   {
-    title: "The Journey of Italian Marble: From Quarry to Your Space",
-    excerpt: "Explore the fascinating process of marble extraction, selection, and transportation from the historic quarries of Italy to your project.",
-    date: "March 10, 2025",
-    image: "/placeholder.svg",
-    category: "Process",
+    title: "The Art of Marble Extraction in Italian Quarries",
+    excerpt: "Explore the centuries-old tradition of marble quarrying in the Apuan Alps of Tuscany.",
+    date: "March 10, 2024",
+    image: blogQuarryImage,
+    category: "Process"
   },
   {
-    title: "Maintaining Your Italian Marble: Expert Care Tips",
-    excerpt: "Learn professional techniques to preserve the beauty and longevity of your Italian marble surfaces with our comprehensive maintenance guide.",
-    date: "March 5, 2025",
-    image: "/placeholder.svg",
-    category: "Maintenance",
+    title: "Maintaining Your Marble: Expert Tips",
+    excerpt: "Learn professional techniques to keep your marble surfaces looking pristine for decades.",
+    date: "March 5, 2024",
+    image: blogMaintenanceImage,
+    category: "Maintenance"
   },
   {
-    title: "2025 Marble Trends in Luxury Architecture",
-    excerpt: "Stay ahead of the curve with the latest marble trends shaping luxury residential and commercial projects worldwide.",
-    date: "February 28, 2025",
-    image: "/placeholder.svg",
-    category: "Trends",
-  },
+    title: "Latest Trends in Marble Interior Design",
+    excerpt: "From minimalist aesthetics to bold statements, see how designers are using marble in 2024.",
+    date: "February 28, 2024",
+    image: blogTrendsImage,
+    category: "Trends"
+  }
 ];
 
-const Blog = () => {
+const Blog = ({ showAll = false }: { showAll?: boolean }) => {
+  const displayPosts = showAll ? blogPosts : blogPosts.slice(0, 3);
+
   return (
-    <section id="blog" className="py-24 px-4 bg-background">
+    <section id="blog" className="py-20 px-4 md:py-32 bg-secondary/30">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
-            Insights & Inspiration
+        <div className="mb-16 text-center animate-fade-in-up">
+          <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
+            Insights & <span className="text-gold">Inspiration</span>
           </h2>
-          <p className="text-lg text-muted-foreground font-sans max-w-2xl mx-auto">
-            Expert guidance on Italian marble selection, care, and design trends
+          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+            Expert advice, industry insights, and inspiration from the world of luxury marble
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {blogPosts.map((post, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-[4/3] overflow-hidden">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {displayPosts.map((post, index) => (
+            <Card
+              key={index}
+              className="group overflow-hidden border-none shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 animate-fade-in cursor-pointer"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className="relative h-56 overflow-hidden">
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-              </div>
-              <CardContent className="p-6">
-                <div className="flex items-center gap-2 text-xs text-gold font-sans mb-3">
-                  <span className="uppercase tracking-wide">{post.category}</span>
+                <div className="absolute top-4 left-4">
+                  <span className="bg-gold text-charcoal px-3 py-1 text-xs font-semibold rounded-sm">
+                    {post.category}
+                  </span>
                 </div>
-                <h3 className="text-xl font-serif font-semibold text-foreground mb-3 line-clamp-2">
+              </div>
+
+              <div className="p-6 bg-card">
+                <h3 className="mb-3 text-xl font-semibold text-card-foreground line-clamp-2 group-hover:text-gold transition-colors">
                   {post.title}
                 </h3>
-                <p className="text-sm text-muted-foreground font-sans mb-4 line-clamp-3">
+                <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
-                <div className="flex items-center gap-2 text-xs text-muted-foreground font-sans">
-                  <Calendar className="h-3 w-3" />
-                  <span>{post.date}</span>
-                </div>
-              </CardContent>
+                <p className="text-xs text-gold">{post.date}</p>
+              </div>
             </Card>
           ))}
         </div>
