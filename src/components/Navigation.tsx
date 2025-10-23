@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Facebook, Instagram, Linkedin } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const Navigation = () => {
@@ -14,12 +14,10 @@ const Navigation = () => {
 
   const menuItems = [
     { label: "Home", id: "hero" },
-    { label: "About Us", id: "about" },
     { label: "Collection", id: "collection" },
-    { label: "Sourcing", id: "sourcing" },
     { label: "Projects", id: "projects" },
-    { label: "Why Choose Us", id: "why-choose" },
     { label: "Gallery", id: "gallery" },
+    { label: "Blog", id: "blog" },
     { label: "Contact", id: "contact" },
   ];
 
@@ -31,7 +29,6 @@ const Navigation = () => {
             <h1 className="text-2xl font-serif font-bold text-foreground">
               Marfields
             </h1>
-            <span className="ml-2 text-sm text-gold">.it</span>
           </div>
 
           {/* Desktop Menu */}
@@ -40,11 +37,22 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-gold transition-colors duration-300 font-sans"
+                className="text-foreground hover:text-gold transition-colors duration-300 font-sans text-sm"
               >
                 {item.label}
               </button>
             ))}
+            <div className="flex items-center gap-4 ml-4 border-l border-border pl-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-gold transition-colors">
+                <Facebook className="h-4 w-4" />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-gold transition-colors">
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-gold transition-colors">
+                <Linkedin className="h-4 w-4" />
+              </a>
+            </div>
           </div>
 
           {/* Mobile Menu */}

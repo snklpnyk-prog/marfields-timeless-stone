@@ -32,7 +32,7 @@ const Hero = () => {
           <Button 
             size="lg" 
             onClick={() => scrollToSection('collection')}
-            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-sans text-base px-8"
+            className="bg-charcoal text-cream hover:bg-charcoal/90 font-sans text-base px-8 shadow-lg"
           >
             Explore Collection
             <ArrowRight className="ml-2 h-5 w-5" />
@@ -41,7 +41,7 @@ const Hero = () => {
             size="lg" 
             variant="outline"
             onClick={() => scrollToSection('contact')}
-            className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 font-sans text-base px-8"
+            className="border-2 border-cream text-cream hover:bg-cream hover:text-charcoal font-sans text-base px-8 bg-charcoal/20 backdrop-blur-sm"
           >
             Contact Us
           </Button>

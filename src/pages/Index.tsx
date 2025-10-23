@@ -6,13 +6,14 @@ import Sourcing from "@/components/Sourcing";
 import Projects from "@/components/Projects";
 import WhyChoose from "@/components/WhyChoose";
 import Gallery from "@/components/Gallery";
+import Blog from "@/components/Blog";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen font-sans">
       <Navigation />
       <Hero />
       <About />
@@ -21,6 +22,7 @@ const Index = () => {
       <Projects />
       <WhyChoose />
       <Gallery />
+      <Blog />
       <Testimonials />
       <Contact />
       <Footer />

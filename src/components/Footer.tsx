@@ -1,3 +1,5 @@
+import { Facebook, Instagram, Linkedin } from "lucide-react";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -41,11 +43,22 @@ const Footer = () => {
               <li>+39 389 951 6628</li>
               <li>+91 9009033077</li>
             </ul>
+            <div className="flex items-center gap-4 mt-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-gold transition-colors">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-gold transition-colors">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-gold transition-colors">
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </div>
           </div>
         </div>
 
         <div className="border-t border-border pt-8 text-center">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-muted-foreground font-sans">
             &copy; {currentYear} Marfields. All Rights Reserved.
           </p>
         </div>

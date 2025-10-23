@@ -3,26 +3,47 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Rajesh Mehta",
-    role: "Architect",
-    company: "Studio RKM",
-    text: "Marfields provided exceptional Calacatta marble for our luxury residential project. The quality and authenticity are unmatched. Their direct sourcing from Italian quarries made all the difference.",
-    rating: 5
+    name: "Arch. Marco Bianchi",
+    role: "Lead Architect",
+    company: "Studio Bianchi, Milan",
+    text: "The quality and authenticity of Marfields' Italian marble transformed our luxury residential project. Truly unmatched.",
+    rating: 5,
   },
   {
     name: "Priya Sharma",
     role: "Interior Designer",
-    company: "Elegance Interiors",
-    text: "Working with Marfields has been a pleasure. Their marble selection is stunning, and the team understands the needs of high-end projects. Truly premium quality.",
-    rating: 5
+    company: "Luxe Interiors, Mumbai",
+    text: "Working with Marfields has been seamless. Their sourcing expertise and attention to detail sets them apart.",
+    rating: 5,
   },
   {
-    name: "Marco Bianchi",
+    name: "David Chen",
     role: "Property Developer",
-    company: "Vista Developments",
-    text: "The marble from Marfields transformed our hotel lobby into a showpiece. The attention to detail and custom sizing options exceeded our expectations.",
-    rating: 5
-  }
+    company: "Elite Estates",
+    text: "The marble we sourced from Marfields elevated our project to a new level of sophistication. Highly recommended.",
+    rating: 5,
+  },
+  {
+    name: "Sofia Rossi",
+    role: "Boutique Hotel Owner",
+    company: "Villa Eleganza, Rome",
+    text: "Marfields delivered exceptional Calacatta marble for our hotel renovation. The beauty and craftsmanship exceeded all expectations.",
+    rating: 5,
+  },
+  {
+    name: "James Anderson",
+    role: "Construction Director",
+    company: "Anderson & Partners",
+    text: "Professional service from start to finish. The marble quality is outstanding and the logistics were perfectly managed.",
+    rating: 5,
+  },
+  {
+    name: "Anjali Mehta",
+    role: "Residential Client",
+    company: "Private Villa, Delhi",
+    text: "Our home has been transformed with the stunning Italian marble from Marfields. It's a masterpiece that will last generations.",
+    rating: 5,
+  },
 ];
 
 const Testimonials = () => {
@@ -32,15 +53,15 @@ const Testimonials = () => {
       
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="mb-16 text-center animate-fade-in-up">
-          <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
+          <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl lg:text-6xl font-serif">
             Trusted by <span className="text-gold">Professionals</span>
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+          <p className="mx-auto max-w-2xl text-lg text-muted-foreground font-sans">
             What our clients say about working with Marfields
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
@@ -53,13 +74,13 @@ const Testimonials = () => {
                 ))}
               </div>
               
-              <p className="mb-6 text-muted-foreground leading-relaxed italic">
+              <p className="mb-6 text-muted-foreground leading-relaxed italic font-sans">
                 "{testimonial.text}"
               </p>
               
               <div className="border-t border-border/50 pt-4">
-                <p className="font-semibold text-foreground">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">
+                <p className="font-semibold text-foreground font-serif">{testimonial.name}</p>
+                <p className="text-sm text-muted-foreground font-sans">
                   {testimonial.role}, {testimonial.company}
                 </p>
               </div>
