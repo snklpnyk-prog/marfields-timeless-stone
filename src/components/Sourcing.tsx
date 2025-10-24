@@ -30,7 +30,7 @@ const Sourcing = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="mb-16 text-center animate-fade-in-up">
           <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
-            From <span className="text-gold">Italian Quarries</span> to Your Space
+            From <span className="text-charcoal">Italian Quarries</span> to Your Space
           </h2>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
             Our commitment to authenticity begins at the source. We personally oversee every step of the journey from the ancient quarries of Italy to your project site.
@@ -55,8 +55,8 @@ const Sourcing = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex-shrink-0">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gold/10">
-                    <Icon className="h-8 w-8 text-gold" strokeWidth={1.5} />
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-charcoal/10">
+                    <Icon className="h-8 w-8 text-charcoal" strokeWidth={1.5} />
                   </div>
                 </div>
                 <div>

@@ -15,7 +15,7 @@ const About = () => {
           
           <div className="order-1 md:order-2 animate-fade-in-up">
             <h2 className="mb-6 text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
-              A Legacy of Stone & <span className="text-gold">Craftsmanship</span>
+              A Legacy of Stone & <span className="text-charcoal">Craftsmanship</span>
             </h2>
             
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">

@@ -65,7 +65,7 @@ const Gallery = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="mb-16 text-center animate-fade-in-up">
           <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
-            Marble <span className="text-gold">Gallery</span>
+            Marble <span className="text-charcoal">Gallery</span>
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
             Explore our curated collection of the world's finest marble and natural stone. Click any stone to view detailed specifications.
@@ -91,7 +91,7 @@ const Gallery = () => {
               
               <div className="absolute bottom-0 left-0 right-0 p-6 text-primary-foreground">
                 <h3 className="mb-2 text-2xl font-semibold">{item.name}</h3>
-                <p className="text-sm text-gold">{item.origin}</p>
+                <p className="text-sm text-charcoal">{item.origin}</p>
               </div>
             </div>
           ))}
@@ -113,7 +113,7 @@ const Gallery = () => {
                   <h2 className="text-3xl font-bold text-foreground mb-2">
                     {selectedItem.name}
                   </h2>
-                  <p className="text-gold text-lg mb-4">{selectedItem.origin}</p>
+                  <p className="text-charcoal text-lg mb-4">{selectedItem.origin}</p>
                   
                   <p className="text-muted-foreground mb-6 leading-relaxed">
                     {selectedItem.description}
@@ -127,7 +127,7 @@ const Gallery = () => {
                       <ul className="space-y-2">
                         {selectedItem.characteristics.map((char, idx) => (
                           <li key={idx} className="flex items-start gap-2 text-muted-foreground">
-                            <span className="text-gold mt-1">•</span>
+                            <span className="text-charcoal mt-1">•</span>
                             {char}
                           </li>
                         ))}
@@ -141,7 +141,7 @@ const Gallery = () => {
                       <ul className="space-y-2">
                         {selectedItem.applications.map((app, idx) => (
                           <li key={idx} className="flex items-start gap-2 text-muted-foreground">
-                            <span className="text-gold mt-1">•</span>
+                            <span className="text-charcoal mt-1">•</span>
                             {app}
                           </li>
                         ))}
