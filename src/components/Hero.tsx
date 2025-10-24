@@ -21,7 +21,7 @@ const Hero = () => {
         <h1 className="mb-6 text-5xl font-bold text-primary-foreground md:text-7xl lg:text-8xl animate-fade-in-up">
           Italian Marble.
           <br />
-          <span className="text-charcoal">Infinite Luxury.</span>
+          <span className="text-gold">Infinite Luxury.</span>
         </h1>
         
         <p className="mb-10 max-w-2xl text-lg text-primary-foreground/90 md:text-xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>

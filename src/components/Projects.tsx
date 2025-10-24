@@ -72,7 +72,7 @@ const Projects = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="mb-16 text-center animate-fade-in-up">
           <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
-            Featured <span className="text-charcoal">Projects</span>
+            Featured <span className="text-gold">Projects</span>
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
             Transforming spaces with Italian marble excellence
@@ -93,7 +93,7 @@ const Projects = () => {
               <h3 className="mb-2 text-3xl md:text-4xl font-bold">
                 {currentProject.name}
               </h3>
-              <p className="mb-1 text-lg md:text-xl text-charcoal">
+              <p className="mb-1 text-lg md:text-xl text-gold">
                 {currentProject.location}
               </p>
               <p className="text-base md:text-lg text-primary-foreground/90">
@@ -118,7 +118,7 @@ const Projects = () => {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`h-2 rounded-full transition-all duration-300 ${
-                    index === currentIndex ? 'w-8 bg-charcoal' : 'w-2 bg-muted'
+                    index === currentIndex ? 'w-8 bg-gold' : 'w-2 bg-muted'
                   }`}
                   aria-label={`Go to project ${index + 1}`}
                 />

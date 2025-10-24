@@ -54,7 +54,7 @@ const Contact = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="mb-16 text-center animate-fade-in-up">
           <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
-            Let's Build Something <span className="text-charcoal">Timeless</span>
+            Let's Build Something <span className="text-gold">Timeless</span>
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
             Reach out to discuss your next project or request samples
@@ -140,8 +140,8 @@ const Contact = () => {
           <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <Card className="p-6 shadow-lg">
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-charcoal/10">
-                  <MessageCircle className="h-6 w-6 text-charcoal" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold/10">
+                  <MessageCircle className="h-6 w-6 text-gold" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">WhatsApp</h3>
@@ -170,8 +170,8 @@ const Contact = () => {
 
             <Card className="p-6 shadow-lg">
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-charcoal/10">
-                  <Mail className="h-6 w-6 text-charcoal" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold/10">
+                  <Mail className="h-6 w-6 text-gold" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">Email</h3>
@@ -180,7 +180,7 @@ const Contact = () => {
               </div>
               <a 
                 href="mailto:marfields.it@gmail.com"
-                className="text-sm text-muted-foreground hover:text-charcoal transition-colors"
+                className="text-sm text-muted-foreground hover:text-gold transition-colors"
               >
                 marfields.it@gmail.com
               </a>
@@ -188,8 +188,8 @@ const Contact = () => {
 
             <Card className="p-6 shadow-lg">
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-charcoal/10">
-                  <Phone className="h-6 w-6 text-charcoal" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold/10">
+                  <Phone className="h-6 w-6 text-gold" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">Direct Call</h3>

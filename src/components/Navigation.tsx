@@ -17,33 +17,22 @@ const Navigation = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md shadow-sm">
       <nav className="container mx-auto flex items-center justify-between px-4 py-4">
-        <Link to="/" className="text-2xl font-bold text-charcoal">
+        <Link to="/" className="text-2xl font-bold text-gold">
           Marfields
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden items-center gap-8 lg:flex flex-1 justify-center">
+        <div className="hidden items-center gap-8 lg:flex">
           {menuItems.map((item) => (
             <Link
               key={item.name}
               to={item.href}
-              className="text-base font-medium text-foreground transition-colors hover:text-charcoal"
+              className="text-sm font-medium text-foreground transition-colors hover:text-gold"
             >
               {item.name}
             </Link>
           ))}
         </div>
-
-        {/* Instagram Icon - Desktop Only */}
-        <a
-          href="https://www.instagram.com/marfields_official?igsh=eTJ4dGVsMmEzbjd6"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden lg:flex items-center justify-center text-foreground hover:text-charcoal transition-colors"
-          aria-label="Instagram"
-        >
-          <Instagram className="h-6 w-6" />
-        </a>
 
         {/* Mobile Menu Button */}
         <Button
@@ -65,7 +54,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className="text-lg font-medium text-foreground transition-colors hover:text-charcoal"
+                className="text-lg font-medium text-foreground transition-colors hover:text-gold"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
@@ -78,7 +67,7 @@ const Navigation = () => {
                 href="https://www.instagram.com/marfields_official?igsh=eTJ4dGVsMmEzbjd6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground hover:text-charcoal transition-colors flex items-center gap-2"
+                className="text-foreground hover:text-gold transition-colors flex items-center gap-2"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />

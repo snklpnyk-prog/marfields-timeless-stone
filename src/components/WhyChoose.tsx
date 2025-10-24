@@ -29,7 +29,7 @@ const WhyChoose = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="mb-16 text-center animate-fade-in-up">
           <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
-            Why Choose <span className="text-charcoal">Marfields</span>
+            Why Choose <span className="text-gold">Marfields</span>
           </h2>
         </div>
 
@@ -43,8 +43,8 @@ const WhyChoose = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="mb-6 flex justify-center">
-                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-charcoal/10 transition-all duration-300 hover:bg-charcoal/20 hover:scale-110">
-                    <Icon className="h-10 w-10 text-charcoal" strokeWidth={1.5} />
+                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-gold/10 transition-all duration-300 hover:bg-gold/20 hover:scale-110">
+                    <Icon className="h-10 w-10 text-gold" strokeWidth={1.5} />
                   </div>
                 </div>
                 
