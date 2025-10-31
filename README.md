@@ -71,3 +71,98 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+
+
+
+
+<!-- -------------------------------------------------------------------------------------------------------- -->
+
+# 🪶 Marfields Timeless Stone
+
+> A modern and elegant website built with React + Vite, designed to showcase premium stone collections, gallery projects, and timeless craftsmanship.
+
+![Marfields Screenshot](./public/preview.png) <!-- Optional: Add a project image -->
+
+---
+
+## 🚀 Tech Stack
+
+- ⚛️ **React 18** — Component-based UI library  
+- ⚡ **Vite** — Lightning-fast build tool  
+- 🎨 **Tailwind CSS** — Utility-first styling  
+- 🧱 **ShadCN/UI + Radix UI** — Accessible, modern components  
+- 🧭 **React Router DOM** — Client-side routing  
+- 🔔 **Sonner / Custom Toaster Hooks** — Toast notifications  
+- 💬 **TanStack Query** — API data fetching & caching  
+- 🧰 **Lucide Icons** — Clean icon library  
+
+---
+
+## 🏗️ Folder Structure
+
+marfields-timeless-stone/
+│
+├── public/ # Static assets (images, favicon, etc.)
+│
+├── src/ # Main source folder
+│ ├── assets/ # Images, fonts, etc.
+│ ├── components/ # Reusable UI components
+│ │ ├── ui/ # ShadCN-based UI components
+│ │ ├── Navigation.jsx # Header / navbar
+│ │ ├── Footer.jsx # Footer section
+│ │ ├── Hero.jsx # Homepage hero section
+│ │ └── ... # Other modular UI parts
+│ │
+│ ├── pages/ # Page-level components for routing
+│ │ ├── Index.jsx # Home page
+│ │ ├── GalleryPage.jsx # Gallery route
+│ │ ├── CollectionPage.jsx
+│ │ ├── ProjectsPage.jsx
+│ │ ├── ContactPage.jsx
+│ │ └── NotFound.jsx
+│ │
+│ ├── hooks/ # Custom React hooks (e.g., useToast)
+│ ├── App.jsx # Root App component
+│ ├── main.jsx # React entry point
+│ ├── index.css # Tailwind / global styles
+│ └── vite-env.d.ts # Vite type definitions (optional)
+│
+├── .gitignore # Ignored files
+├── package.json # Project metadata and dependencies
+├── tailwind.config.js # Tailwind configuration
+├── postcss.config.js # PostCSS configuration
+├── vite.config.js # Vite configuration file
+└── README.md # You are here
+
+
+---
+
+## ⚙️ Setup & Installation
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/marfields-timeless-stone.git
+cd marfields-timeless-stone
+
+# Install Dependencies 
+1. npm install
+
+# Run the Development Server
+2. npm run dev
+
+# Build for Production
+3. npm run build
+
+
+### 
+Core Features
+
+✅ Fully responsive layout for all devices
+✅ Modular component-based architecture
+✅ Smooth routing and transitions
+✅ Reusable UI & animation components
+✅ Toast notifications system
+✅ Optimized build with Vite
+✅ Easy future scalability
+
